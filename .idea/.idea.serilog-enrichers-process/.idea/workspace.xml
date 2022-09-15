@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ff608571-abb5-4157-87e4-5035c378900e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Build.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGES.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appveyor.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serilog-enrichers-process.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Serilog.Enrichers.Activity/ProcessLoggerConfigurationExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Serilog.Enrichers.Activity/ProcessLoggerConfigurationExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Serilog.Enrichers.Process/Enrichers/ProcessIdEnricher.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Serilog.Enrichers.Process/Enrichers/ProcessNameEnricher.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Serilog.Enrichers.Process/ProcessLoggerConfigurationExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Serilog.Enrichers.Process/Properties/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Serilog.Enrichers.Process/Serilog.Enrichers.Process.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Serilog.Enrichers.Process.Tests/Enrichers/ProcessIdEnricherTests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Serilog.Enrichers.Process.Tests/Enrichers/ProcessNameEnricherTests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Serilog.Enrichers.Process.Tests/Serilog.Enrichers.Process.Tests.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Serilog.Enrichers.Process.Tests/Support/DelegatingSink.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Serilog.Enrichers.Process.Tests/Support/Extensions.cs" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2a925edfe5584632978e98fd8509cdf4d7a8/86/e66c8f89/FactAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7a1ad32abaee44480b66c2c1fcee9628cca92a4cd272eced5781564201180/Number.Parsing.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9d38db6eeb54def2a1f784f931cd83f29943d2ccb29dbdea3939ffee33e476/Activity.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Serilog.Enrichers.Activity/Enrichers/TraceDatadogFormatEnricher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Serilog.Enrichers.Activity/ProcessLoggerConfigurationExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Serilog.Enrichers.Activity/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2En6qiTwvFyww2puP4v4A9Df6jL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ff608571-abb5-4157-87e4-5035c378900e" name="Changes" comment="" />
+      <created>1663219193810</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663219193810</updated>
+      <workItem from="1663219220654" duration="3908000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/test/Serilog.Enrichers.Activity.Tests/Enrichers/SpanEnricherTests.cs</url>
+          <line>39</line>
+          <properties documentPath="C:\Users\developer\development\dotnet\serilog-enrichers-process\test\Serilog.Enrichers.Activity.Tests\Enrichers\SpanEnricherTests.cs" initialLine="39" containingFunctionPresentation="method 'SpanEnricherIsApplied'">
+            <startOffsets>
+              <option value="948" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1027" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

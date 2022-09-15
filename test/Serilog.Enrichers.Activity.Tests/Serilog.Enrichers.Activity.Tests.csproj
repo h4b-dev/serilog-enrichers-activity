@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+      <IsPackable>false</IsPackable>
+      <TargetFramework>net6.0</TargetFramework>
+      <AssemblyName>Serilog.Enrichers.Activity.Tests</AssemblyName>
+      <RootNamespace>Serilog.Enrichers.Activity.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Serilog.Enrichers.Activity\Serilog.Enrichers.Activity.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+  </ItemGroup>
+
+</Project>
