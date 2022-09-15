@@ -22,15 +22,17 @@ public class TraceDatadogFormatEnricher : ILogEventEnricher
     /// <param name="propertyFactory">Factory for creating new properties to add to the event.</param>
     public void Enrich(LogEvent logEvent, ILogEventPropertyFactory propertyFactory)
     {
-        var property = propertyFactory.CreateProperty(TraceIdPropertyName, GetTraceId());
+        var activity = System.Diagnostics.Activity.Current;
+        if (activity is null) return;
+
+        var property = propertyFactory.CreateProperty(TraceIdPropertyName, GetTraceId(activity));
         logEvent.AddPropertyIfAbsent(property);
     }
 
-    private static string GetTraceId()
+    private static string GetTraceId(System.Diagnostics.Activity activity)
     {
-        using var activity = System.Diagnostics.Activity.Current;
-        var traceId = activity?.TraceId.ToString();
-        var ddTraceId = Convert.ToUInt64(traceId?[16..], 16).ToString();
+        var traceId = activity.TraceId.ToString();
+        var ddTraceId = Convert.ToUInt64(traceId[16..], 16).ToString();
         return ddTraceId;
     }
 }

@@ -22,14 +22,16 @@ public class SpanDatadogFormatEnricher : ILogEventEnricher
     /// <param name="propertyFactory">Factory for creating new properties to add to the event.</param>
     public void Enrich(LogEvent logEvent, ILogEventPropertyFactory propertyFactory)
     {
-        var property = propertyFactory.CreateProperty(SpanIdPropertyName, GetSpanId());
+        var activity = System.Diagnostics.Activity.Current;
+        if (activity is null) return;
+
+        var property = propertyFactory.CreateProperty(SpanIdPropertyName, GetSpanId(activity));
         logEvent.AddPropertyIfAbsent(property);
     }
 
-    private static string GetSpanId()
+    private static string GetSpanId(System.Diagnostics.Activity activity)
     {
-        using var activity = System.Diagnostics.Activity.Current;
-        var spanId = activity?.SpanId.ToString();
+        var spanId = activity.SpanId.ToString();
         var ddSpanId = Convert.ToUInt64(spanId, 16).ToString();
         return ddSpanId;
     }
