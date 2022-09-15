@@ -8,12 +8,14 @@ namespace Serilog.Enrichers.Activity.Enrichers;
 /// <summary>
 /// Enriches log events with a Trace property containing the current <see cref="Activity.TraceId"/>.
 /// </summary>
-public class TraceDatadogFormatEnricher : ILogEventEnricher
+public class ActivityDatadogFormatEnricher : ILogEventEnricher
 {
     /// <summary>
     /// The property name added to enriched log events.
     /// </summary>
     private const string TraceIdPropertyName = "dd.trace_id";
+
+    private const string SpanIdPropertyName = "dd.span_id";
 
     /// <summary>
     /// Enrich the log event.
@@ -25,14 +27,21 @@ public class TraceDatadogFormatEnricher : ILogEventEnricher
         var activity = System.Diagnostics.Activity.Current;
         if (activity is null) return;
 
-        var property = propertyFactory.CreateProperty(TraceIdPropertyName, GetTraceId(activity));
-        logEvent.AddPropertyIfAbsent(property);
+        var traceProperty = propertyFactory.CreateProperty(TraceIdPropertyName, GetTraceId(activity));
+        var spanProperty = propertyFactory.CreateProperty(SpanIdPropertyName, GetSpanId(activity));
+        logEvent.AddPropertyIfAbsent(traceProperty);
+        logEvent.AddPropertyIfAbsent(spanProperty);
     }
 
     private static string GetTraceId(System.Diagnostics.Activity activity)
     {
-        var traceId = activity.TraceId.ToString();
-        var ddTraceId = Convert.ToUInt64(traceId[16..], 16).ToString();
-        return ddTraceId;
+        var traceId = activity.TraceId.ToString().TraceIdToDatadogFormat();
+        return traceId;
+    }
+
+    private static string GetSpanId(System.Diagnostics.Activity activity)
+    {
+        var spanId = activity.SpanId.ToString().SpanIdToDatadogFormat();
+        return spanId;
     }
 }

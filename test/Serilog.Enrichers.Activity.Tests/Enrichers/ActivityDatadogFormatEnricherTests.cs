@@ -26,17 +26,18 @@ public class SpanEnricherTests
     {
         LogEvent evt = null;
         var log = new LoggerConfiguration()
-            .Enrich.WithSpanDatadogFormat()
+            .Enrich.WithActivityDatadogFormat()
             .WriteTo.Sink(new DelegatingSink(e => evt = e))
             .CreateLogger();
 
-        log.Information(@"Has a SpanId property");
+        log.Information(@"Has a TraceId and SpanId property");
 
         Assert.NotNull(evt);
 
-        var spanId = _testActivity.SpanId.ToString();
-        var ddSpanId = Convert.ToUInt64(spanId, 16).ToString();
+        var traceId = _testActivity.TraceId.ToString().TraceIdToDatadogFormat();
+        var spanId = _testActivity.SpanId.ToString().SpanIdToDatadogFormat();
 
-        Assert.AreEqual(ddSpanId, (string)evt.Properties["dd.span_id"].LiteralValue());
+        Assert.AreEqual(traceId, (string)evt.Properties["dd.trace_id"].LiteralValue());
+        Assert.AreEqual(spanId, (string)evt.Properties["dd.span_id"].LiteralValue());
     }
 }

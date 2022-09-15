@@ -16,17 +16,10 @@ public static class ActivityLoggerConfigurationExtensions
     /// </summary>
     /// <param name="enrichmentConfiguration">Logger enrichment configuration.</param>
     /// <returns>Configuration object allowing method chaining.</returns>
-    public static LoggerConfiguration WithTraceDatadogFormat(
+    public static LoggerConfiguration WithActivityDatadogFormat(
         this LoggerEnrichmentConfiguration enrichmentConfiguration)
     {
         if (enrichmentConfiguration == null) throw new ArgumentNullException(nameof(enrichmentConfiguration));
-        return enrichmentConfiguration.With<TraceDatadogFormatEnricher>();
-    }
-
-    public static LoggerConfiguration WithSpanDatadogFormat(
-        this LoggerEnrichmentConfiguration enrichmentConfiguration)
-    {
-        if (enrichmentConfiguration == null) throw new ArgumentNullException(nameof(enrichmentConfiguration));
-        return enrichmentConfiguration.With<SpanDatadogFormatEnricher>();
+        return enrichmentConfiguration.With<ActivityDatadogFormatEnricher>();
     }
 }
