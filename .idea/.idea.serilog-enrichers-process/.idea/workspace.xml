@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff608571-abb5-4157-87e4-5035c378900e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.serilog-enrichers-process/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.serilog-enrichers-process/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Build.ps1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CHANGES.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
@@ -70,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663219193810</updated>
-      <workItem from="1663219220654" duration="3908000" />
+      <workItem from="1663219220654" duration="4256000" />
     </task>
     <servers />
   </component>

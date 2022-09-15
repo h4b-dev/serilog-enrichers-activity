@@ -1,0 +1,35 @@
+name: Deploy package
+on:
+    push:
+        branches: [ main ]
+
+jobs:
+    build_and_deploy:
+        
+        runs-on: ubuntu-latest
+        
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+
+            - name: Setup .NET Core
+              uses: actions/setup-dotnet@v1.7.2
+              with:
+                  dotnet-version: 6.0.x
+                  source-url: https://nuget.pkg.github.com/h4b-dev/index.json
+              env:
+                  NUGET_AUTH_TOKEN: ${{secrets.NUGET_API_KEY}}
+
+            - name: Install dependencies
+              run: dotnet restore src/Serilog.Enrichers.Activity
+
+            - name: Build
+              run: dotnet build src/Serilog.Enrichers.Activity --configuration Release --no-restore
+
+            - name: Pack
+              run: dotnet pack --no-build --configuration Release src/Serilog.Enrichers.Activity/Serilog.Enrichers.Activity.csproj --output .
+
+            - name: PushGithub
+              run: dotnet nuget push *.nupkg --no-symbols --skip-duplicate
+              env:
+                  NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY }}
