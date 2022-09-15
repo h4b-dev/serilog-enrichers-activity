@@ -10,8 +10,6 @@ namespace Serilog.Enrichers.Activity.Enrichers;
 /// </summary>
 public class TraceDatadogFormatEnricher : ILogEventEnricher
 {
-    LogEventProperty _cachedProperty;
-
     /// <summary>
     /// The property name added to enriched log events.
     /// </summary>
@@ -24,8 +22,8 @@ public class TraceDatadogFormatEnricher : ILogEventEnricher
     /// <param name="propertyFactory">Factory for creating new properties to add to the event.</param>
     public void Enrich(LogEvent logEvent, ILogEventPropertyFactory propertyFactory)
     {
-        _cachedProperty ??= propertyFactory.CreateProperty(TraceIdPropertyName, GetTraceId());
-        logEvent.AddPropertyIfAbsent(_cachedProperty);
+        var property = propertyFactory.CreateProperty(TraceIdPropertyName, GetTraceId());
+        logEvent.AddPropertyIfAbsent(property);
     }
 
     private static string GetTraceId()

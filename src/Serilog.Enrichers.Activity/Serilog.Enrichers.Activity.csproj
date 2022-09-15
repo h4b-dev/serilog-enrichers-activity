@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <Description>The activity enricher for Serilog.</Description>
-    <VersionPrefix>0.0.1</VersionPrefix>
+    <VersionPrefix>0.0.2</VersionPrefix>
     <Authors>Serilog Contributors</Authors>
     <AssemblyName>Serilog.Enrichers.Activity</AssemblyName>
     <AssemblyOriginatorKeyFile>../../assets/Serilog.snk</AssemblyOriginatorKeyFile>
